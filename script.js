@@ -56,12 +56,8 @@ function boxClicked_3() {
   
   leftMargin[3] += moveAmount;
   
-  if (i < 2) {
-    i += 1;
-  } else {
-    boxes[3].style.marginLeft = 4*leftMargin[3] + "px";
-    i = 1;
-  }
+  boxes[3].style.marginLeft = 4*leftMargin[3] + "px";
+
 }
 
 
@@ -77,5 +73,5 @@ function boxClicked_4() {
 boxes[0].addEventListener("click", boxClicked_0);
 boxes[1].addEventListener("click", boxClicked_1);
 boxes[2].addEventListener("click", boxClicked_2);
-boxes[3].addEventListener("click", boxClicked_3);
+boxes[3].addEventListener("dblclick", boxClicked_3);
 boxes[4].addEventListener("click", boxClicked_4);
