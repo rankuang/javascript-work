@@ -10,7 +10,7 @@ boxes[3].style.backgroundColor = "blanchedalmond";
 var leftMargin = [0,0,0,0,0];
 var topMargin = [0,0,0,0,0];
 var moveAmount = 5;
-
+var i = 1;
 
 // for (var i = 0; i<=4; i++) {
 //   boxes[i].addEventListener("click", boxClicked_ + i);
@@ -53,12 +53,17 @@ function boxClicked_2() {
 
 function boxClicked_3() {
   console.log("Hey, 4_box clicked!")
-
+  
   leftMargin[3] += moveAmount;
-
-  boxes[3].style.marginLeft = 4*leftMargin[3] + "px";
-
+  
+  if (i < 2) {
+    i += 1;
+  } else {
+    boxes[3].style.marginLeft = 4*leftMargin[3] + "px";
+    i = 1;
+  }
 }
+
 
 function boxClicked_4() {
   console.log("Hey, 5_box clicked!")
